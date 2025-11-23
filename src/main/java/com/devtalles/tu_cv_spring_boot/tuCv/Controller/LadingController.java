@@ -22,6 +22,11 @@ import org.springframework.web.bind.annotation.RequestBody;
 @RequiredArgsConstructor
 public class LadingController {
     private final  CvInitializationServices cvInitializationServices;
+    @GetMapping("/")
+    public String redircetToForm() {
+        return "redirect:/cv-form";
+    }
+    
 
     @GetMapping("/cv-form")
     public String showFormCvString( Model model) {
